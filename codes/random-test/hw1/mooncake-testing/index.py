@@ -28,13 +28,24 @@ def check_moon_cake(pack_id, exp_date, single_price, amount):
 
 def main():
   t = int(input())
+
+  if not (1 <= t <= 8):
+    return "Hint: 1 ≤ t ≤ 8"
+  
   for _ in range(t):
     # 1. 拆分內容
     pack_id, exp_date, single_price, amount = input().split(',')
 
     # 2. 日期轉換為列表便於後續比較
-    year, month, day = map(int, exp_date.split('-'))
-    exp_date = [year, month, day]
+    y, m, d = map(int, exp_date.split('-'))
+
+    if (y < 0 or m < 0 or d < 0):
+      return "Hint: y, m, d ≥ 0"
+    
+    exp_date = [y, m, d]
+
+    if (int(single_price) < 0 or int(amount) < 0):
+      return "Hint: single_price, amount ≥ 0"
     
     result = check_moon_cake(pack_id, exp_date, int(single_price), int(amount))
     print(result)

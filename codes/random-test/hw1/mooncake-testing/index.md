@@ -27,23 +27,29 @@
 ## Sample Input / Output
 
 ```py
+8
 pack0,2023-9-26,80,7
-pack1,2023-10-3,60,9
-pack2,2023-10-25,65,9
-pack3,2023-9-25,60,6
-pack4,2023-10-7,80,6
-pack5,2023-10-12,70,6
-pack6,2023-10-3,60,12
-pack7,2023-10-22,60,6
-
-
 pack0 has labeling problem!
+
+pack1,2023-10-3,60,9
 pack1 should be sold at price 324.
+
+pack2,2023-10-25,65,9
 pack2 has labeling problem!
+
+pack3,2023-9-25,60,6
 pack3 has expired, it should not be sold.
+
+pack4,2023-10-7,80,6
 pack4 should be sold at price 384.
+
+pack5,2023-10-12,70,6
 pack5 should be sold at price 336.
+
+pack6,2023-10-3,60,12
 pack6 should be sold at price 432.
+
+pack7,2023-10-22,60,6
 pack7 should be sold at price 360.
 ```
 
